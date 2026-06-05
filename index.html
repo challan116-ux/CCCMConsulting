@@ -694,6 +694,7 @@
     // Selected work portfolio
     const WORK = [
       { name: 'SignalEDI', tag: 'Apps · AI platform', accent: 'gold', mock: 'dash', href: '#signaledi', live: true,
+        img: 'assets/signaledi-hero.webp',
         desc: 'AI-native EDI automation with self-service partner onboarding, X12 generation, and compliance built in.',
         chips: ['Next.js', 'OpenAI', 'Prisma', 'BullMQ'], metric: '810 · 856 · 997' },
       { name: 'Vantage Commerce', tag: 'Commerce · Headless storefront', accent: 'cyan', mock: 'store', href: '#contact',
@@ -811,6 +812,7 @@
       return '<a href="' + w.href + '" class="reveal glass card-hover rounded-2xl overflow-hidden block cursor-pointer group">' +
                '<div class="relative h-44 overflow-hidden border-b border-line">' +
                  workMockup(w, a) +
+                 (w.img ? '<img src="' + w.img + '" alt="' + w.name + ' product screenshot" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" style="object-position:center 18%" onerror="this.remove()">' : '') +
                  '<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(8,13,26,0.10) 0%,rgba(8,13,26,0) 30%,rgba(8,13,26,0.55) 100%)"></div>' +
                  '<span class="absolute top-4 left-4 pill rounded-full px-3 py-1 text-xs text-slate-300 backdrop-blur-sm">' + w.tag + '</span>' +
                  badge +
